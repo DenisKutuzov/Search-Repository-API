@@ -134,6 +134,16 @@ h1 {
   }
 }
 
+h3 {
+  margin: 50px;
+  font-size: 25px;
+}
+@media (max-width: 490px) {
+  h3 {
+    margin: 20px;
+  }
+}
+
 .invalid {
   border-color: red;
 }
@@ -206,11 +216,6 @@ button:disabled {
   background-color: #bdbdbd;
 }
 
-h3 {
-  margin: 50px;
-  font-size: 25px;
-}
-
 .loader {
   margin: 80px auto;
   border: 5px solid #f3f3f3;
@@ -245,7 +250,7 @@ h3 {
 }
 
 .frog {
-  background-image: url(img/frog.png);
+  background: url(/img/frog.png);
   background-size: cover;
   width: 300px;
   height: 300px;
@@ -256,7 +261,7 @@ h3 {
 }
 @media (max-width: 490px) {
   .frog {
-    top: 50%;
+    top: 35%;
     width: 200px;
     height: 200px;
   }
