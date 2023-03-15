@@ -1,0 +1,171 @@
+@import 'reset.scss';
+
+body {
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+
+  @media (max-width: 490px) {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+}
+
+.invalid {
+  border-color: red;
+}
+#error {
+  color: red;
+}
+
+a {
+  margin-top: 10px;
+  color: #212529;
+  font-size: 20px;
+}
+
+a:hover {
+  opacity: 0.5;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+input {
+  width: 100%;
+  max-width: 330px;
+  background-color: #fff;
+  color: #212529;
+  padding: 10px 10px;
+  font-size: 20px;
+  border: 1px solid #bdbdbd;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: inset 0 0 0 50px #fff !important;
+  box-shadow: inset 0 0 0 50px #fff !important;
+}
+
+.container {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 700px;
+
+  @media (max-width: 490px) {
+    padding: 20px;
+  }
+}
+
+button {
+  background-color: black;
+  color: white;
+  border: 1px solid;
+  padding: 9px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+
+  @media (max-width: 490px) {
+    padding: 9px 15px;
+  }
+
+  &:disabled {
+    border: 1px solid;
+    background-color: #bdbdbd;
+  }
+}
+
+h3 {
+  margin: 50px;
+  font-size: 25px;
+}
+
+.loader {
+  margin: 80px auto;
+  border: 5px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 5px solid black;
+  width: 40px;
+  height: 40px;
+  -webkit-animation: spin 1s linear infinite; /* Safari */
+  animation: spin 1s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.repositorys__list {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-top: 1px solid #bdbdbd;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+}
+
+.repository__text {
+  width: 315px;
+}
+
+.frog {
+  background-image: url(img/frog.png);
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 40%;
+  left: -300px;
+  transition: 2.5s all;
+
+  @media (max-width: 490px) {
+    top: 50%;
+    width: 200px;
+    height: 200px;
+  }
+}
+
+.frog_vis {
+  animation: frog-animation 2.5s linear;
+}
+
+@keyframes frog-animation {
+  0% {
+    transform: translateX(0);
+  }
+  40% {
+    transform: translateX(300px);
+  }
+  70% {
+    transform: translateX(300px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
